@@ -9,6 +9,6 @@ class PostController extends Controller
 {
 	public function index(Post $post) //Postをインスタンス化する
 	{
-		    return view("posts/index")->with(['posts' => $post->get()]);
+	     return view("posts/index")->with(['posts'=>$post->getPaginateByLimit()]);
 	}
 }
